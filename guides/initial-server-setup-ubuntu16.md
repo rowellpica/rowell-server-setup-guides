@@ -44,6 +44,12 @@ sudo apt-get update
 sudo apt-get install oracle-java8-installer
 sudo update-alternatives --config java # check the location of jdk
 sudo vim /etc/environment
+```
+Add this line to set the JAVA_HOME in the environment variables
+```
   JAVA_HOME="/usr/lib/jvm/java-8-oracle"
+```
+Load the new environment variable
+```
 source /etc/environment
 ```
