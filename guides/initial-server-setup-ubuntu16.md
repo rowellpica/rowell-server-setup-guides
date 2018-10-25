@@ -64,7 +64,8 @@ sudo systemctl enable mongod
 # sudo systemctl status mongod
 ```
 
-Use Studio 3T to add an admin user
+Use Studio 3T to add an admin user. 
+You can download it from [here](https://studio3t.com/).
 
 Enable Authentication
 ```
