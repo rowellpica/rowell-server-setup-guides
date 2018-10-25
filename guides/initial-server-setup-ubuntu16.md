@@ -1,5 +1,3 @@
-### Author rowellpica
-
 ## Create a SUDO user with Public Key Authentication
 Change "sammy" to your preffered sudo user name
 Execute from root
