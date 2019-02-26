@@ -161,3 +161,33 @@ sudo systemctl start redis
 sudo systemctl enable redis
 sudo systemctl status redis
 ```
+
+## 07 Setup UFW (Uncomplicated Firewall)
+```
+sudo apt-get install ufw
+```
+```
+sudo vim /etc/default/ufw`
+>> # make sure IPV6 is set to 'yes'
+>> IPV6=yes
+```
+```
+# reset the default configuration
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+
+# allow ssh (important)
+sudo ufw allow ssh
+
+# allow mysql db default port access if necessary
+sudo ufw allow 3306
+
+# allow redis-cli default port access if necessary
+sudo ufw allow 6379
+
+# enable ufw
+sudo ufw enable
+
+# check status
+sudo ufw status
+```
