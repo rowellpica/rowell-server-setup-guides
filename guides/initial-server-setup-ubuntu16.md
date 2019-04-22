@@ -63,13 +63,20 @@ sudo systemctl enable mongod
 Use Studio 3T to add an admin user. 
 You can download it from [here](https://studio3t.com/).
 
-Enable Authentication
+Update MongoDB Configuration
 ```
 sudo vim /etc/mongod.conf
 ```
+Enable Authentication
 ```
 security:
   authorization: "enabled"
+```
+Enable Remote Access
+```
+net:
+  port: 27017
+  bindIp: 127.0.0.1,IP_of_MongoHost
 ```
 Restart the mongod service
 ```
