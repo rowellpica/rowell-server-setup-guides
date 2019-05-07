@@ -174,7 +174,7 @@ sudo systemctl status redis
 sudo apt-get install ufw
 ```
 ```
-sudo vim /etc/default/ufw`
+sudo vim /etc/default/ufw
 >> # make sure IPV6 is set to 'yes'
 >> IPV6=yes
 ```
@@ -191,6 +191,9 @@ sudo ufw allow 3306
 
 # allow redis-cli default port access if necessary
 sudo ufw allow 6379
+
+# allow incoming SSH from Specific IP Address or Subnet
+sudo ufw allow from <IP_ADDRESS or SUBNET> to any port 22
 
 # enable ufw
 sudo ufw enable
