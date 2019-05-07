@@ -112,6 +112,15 @@ su - ${USER}
 # id -nG
 ```
 
+Docker has a known issue when use together with UFW. Docker ignores the UFW Settings since it uses iptables directly. To fix, edit the docker default settings:
+```
+sudo vim /etc/default/docker
+```
+add the following:
+```
+DOCKER_OPTS="--iptables=false"
+```
+
 ## 06 Install Redis (Optional)
 ```
 sudo apt-get update
