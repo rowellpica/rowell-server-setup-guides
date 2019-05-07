@@ -120,6 +120,15 @@ add the following:
 ```
 DOCKER_OPTS="--iptables=false"
 ```
+and creating a daemon config file:
+```
+sudo vim /etc/docker/daemon.json
+```
+```
+{
+  "iptables": false
+}
+```
 
 ## 06 Install Redis (Optional)
 ```
