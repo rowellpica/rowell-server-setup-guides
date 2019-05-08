@@ -11,3 +11,7 @@ $ sudo less /var/log/auth.log
 $ find /path/to/files -mindepth 1 -mtime +5 -print
 $ find /path/to/files -mindepth 1 -mtime +5 -delete
 ```
+## Access a docker container with root privileged
+```
+docker exec -it --privileged --user root container_id /bin/bash
+```
