@@ -1,7 +1,6 @@
 ## Check Databases Size
 ```
-SELECT table_schema "DB Name",
-        ROUND(SUM(data_length + index_length) / 1024 / 1024, 1) "DB Size in MB" 
-FROM information_schema.tables 
+SELECT table_schema AS "dbname", ROUND(SUM(data_length + index_length) / 1024 / 1024, 1) AS "dbsize"
+FROM information_schema.tables
 GROUP BY table_schema;
 ```
