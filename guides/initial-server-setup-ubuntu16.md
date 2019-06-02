@@ -86,7 +86,7 @@ sudo systemctl restart mongod
 ## 05 Install Docker (Optional)
 ```
 sudo apt-get update
-sudo apt-get install \
+sudo apt-get install -y \
     apt-transport-https \
     ca-certificates \
     curl \
@@ -98,7 +98,7 @@ sudo add-apt-repository \
    $(lsb_release -cs) \
    stable"
 sudo apt-get update
-sudo apt-get install docker-ce
+sudo apt-get install -y docker-ce
 ```
 Install docker-compose
 ```
