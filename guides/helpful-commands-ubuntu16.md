@@ -15,3 +15,8 @@ $ find /path/to/files -mindepth 1 -mtime +5 -delete
 ```
 docker exec -it --privileged --user root container_id /bin/bash
 ```
+## tar/untar gzip a folder
+```
+tar czf name.tar.gz name/
+tar -zxf name.tar.gz
+```
