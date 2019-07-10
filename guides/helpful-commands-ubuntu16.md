@@ -20,3 +20,10 @@ docker exec -it --privileged --user root container_id /bin/bash
 tar czf name.tar.gz name/
 tar -zxf name.tar.gz
 ```
+## Count number of cores
+```
+# virtual cores
+grep -c ^processor /proc/cpuinfo
+# physical cores
+grep ^cpu\\scores /proc/cpuinfo | uniq |  awk '{print $4}' 
+```
