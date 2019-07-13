@@ -27,3 +27,7 @@ grep -c ^processor /proc/cpuinfo
 # physical cores
 grep ^cpu\\scores /proc/cpuinfo | uniq |  awk '{print $4}' 
 ```
+## Check certificate validity
+```
+cat certificate.crt  | openssl x509 -noout -enddate
+```
