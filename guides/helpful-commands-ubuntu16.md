@@ -31,3 +31,7 @@ grep ^cpu\\scores /proc/cpuinfo | uniq |  awk '{print $4}'
 ```
 cat certificate.crt  | openssl x509 -noout -enddate
 ```
+## Remove dangling docker images
+```
+docker rmi $(docker images -f "dangling=true" -q)
+```
