@@ -35,3 +35,8 @@ cat certificate.crt  | openssl x509 -noout -enddate
 ```
 docker rmi $(docker images -f "dangling=true" -q)
 ```
+### git commands
+```
+git diff --name-only
+git checkout -- filename.txt
+```
