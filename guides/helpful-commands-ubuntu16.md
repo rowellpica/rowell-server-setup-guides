@@ -40,3 +40,7 @@ docker rmi $(docker images -f "dangling=true" -q)
 git diff --name-only
 git checkout -- filename.txt
 ```
+### autoscreencapture
+```
+while [ 1 ];do vardate=$(date +%d\-%m\-%Y\_%H.%M.%S); screencapture -t jpg -x ~/Desktop/project_name/$vardate.jpg; sleep 10; done
+```
