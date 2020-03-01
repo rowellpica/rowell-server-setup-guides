@@ -39,6 +39,10 @@ $ cat certificate.crt  | openssl x509 -noout -enddate
 ```
 $ docker rmi $(docker images -f "dangling=true" -q)
 ```
+## Remove all exited docker containers
+```
+$ sudo docker ps -a | grep Exit | cut -d ' ' -f 1 | xargs sudo docker rm
+```
 ## git commands
 ```
 $ git diff --name-only
