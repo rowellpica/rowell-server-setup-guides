@@ -11,36 +11,40 @@ $ sudo less /var/log/auth.log
 $ find /path/to/files -mindepth 1 -mtime +5 -print
 $ find /path/to/files -mindepth 1 -mtime +5 -delete
 ```
+## Check linux folder size
+```
+$ du -h --max-depth=1 /
+```
 ## Access a docker container with root privileged
 ```
-docker exec -it --privileged --user root container_id /bin/bash
+$ docker exec -it --privileged --user root container_id /bin/bash
 ```
 ## tar/untar gzip a folder
 ```
-tar czf name.tar.gz name/
-tar -zxf name.tar.gz
+$ tar czf name.tar.gz name/
+$ tar -zxf name.tar.gz
 ```
 ## Count number of cores
 ```
 # virtual cores
-grep -c ^processor /proc/cpuinfo
+$ grep -c ^processor /proc/cpuinfo
 # physical cores
-grep ^cpu\\scores /proc/cpuinfo | uniq |  awk '{print $4}' 
+$ grep ^cpu\\scores /proc/cpuinfo | uniq |  awk '{print $4}' 
 ```
 ## Check certificate validity
 ```
-cat certificate.crt  | openssl x509 -noout -enddate
+$ cat certificate.crt  | openssl x509 -noout -enddate
 ```
 ## Remove dangling docker images
 ```
-docker rmi $(docker images -f "dangling=true" -q)
+$ docker rmi $(docker images -f "dangling=true" -q)
 ```
-### git commands
+## git commands
 ```
-git diff --name-only
-git checkout -- filename.txt
+$ git diff --name-only
+$ git checkout -- filename.txt
 ```
-### autoscreencapture
+## autoscreencapture
 ```
-while [ 1 ];do vardate=$(date +%d\-%m\-%Y\_%H.%M.%S); screencapture -t jpg -x ~/Desktop/project_name/$vardate.jpg; sleep 10; done
+$ while [ 1 ];do vardate=$(date +%d\-%m\-%Y\_%H.%M.%S); screencapture -t jpg -x ~/Desktop/project_name/$vardate.jpg; sleep 10; done
 ```
