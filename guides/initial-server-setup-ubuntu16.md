@@ -219,3 +219,12 @@ sudo ufw enable
 # check status
 sudo ufw status
 ```
+
+## 08 Run sudo without password
+```
+$ sudo visudo
+```
+```
+# At the end of the file
+bcosuser ALL=(ALL) NOPASSWD:ALL
+```
