@@ -52,3 +52,10 @@ $ git checkout -- filename.txt
 ```
 $ while [ 1 ];do vardate=$(date +%d\-%m\-%Y\_%H.%M.%S); screencapture -t jpg -x ~/Desktop/project_name/$vardate.jpg; sleep 10; done
 ```
+## node for sudo commands
+```
+n=$(which node); \
+n=${n%/bin/node}; \
+chmod -R 755 $n/bin/*; \
+sudo cp -r $n/{bin,lib,share} /usr/local
+```
