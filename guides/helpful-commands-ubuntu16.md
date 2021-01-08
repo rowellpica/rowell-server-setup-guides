@@ -63,3 +63,8 @@ sudo cp -r $n/{bin,lib,share} /usr/local
 ```
 sudo lsof -i -P -n | grep LISTEN
 ```
+## check for supported tls versions
+```
+sudo apt install nmap -y
+nmap --script ssl-enum-ciphers -p 443 phstocks.pahina.xyz
+```
